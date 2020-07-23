@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot name="sensor_hokuyo" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_gazebo.urdf.xacro"/>
+  <xacro:include filename="$(find turtlebot_description)/urdf/turtlebot_properties.urdf.xacro"/>
+
+  <xacro:macro name="sensor_hokuyo" params="parent">
+    <link name="hokuyo_link">
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.1 0.1 0.1"/>
+        </geometry>
+      </collision>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <mesh filename="package://turtlebot_description/meshes/sensors/hokuyo.dae"/>
+        </geometry>
+      </visual>
+      <inertial>
+        <mass value="1e-5" />
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+      </inertial>
+    </link>
+    <joint name="hokuyo_joint" type="fixed">
+      <!--<axis xyz="0 0 1" />-->
+      <origin xyz="0 0 0.430" rpy="0 0 3.1415926"/>
+      <parent link="${parent}"/>
+      <child link="hokuyo_link"/>
+     </joint>
+     <!-- Hokuyo sensor for simulation -->
+     <turtlebot_sim_laser_range_finder/>
+  </xacro:macro>
+</robot>

@@ -1,0 +1,1265 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <!-- Own physics settings to speed up simulation -->
+    <physics type='ode'>
+      <max_step_size>0.01</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>100</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+    </physics>
+    <model name="target">
+      <link name="link">
+	<collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>0.2 0.2</point>
+              <point>0.2 -0.2</point>
+              <point>-0.2 -0.2</point>
+              <point>-0.2 0.2</point>
+              <height>0.001</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="target">
+          <geometry>
+            <polyline>
+              <point>0.2 0.2</point>
+              <point>0.2 -0.2</point>
+              <point>-0.2 -0.2</point>
+              <point>-0.2 0.2</point>
+              <height>0.001</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="wall1">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>10 10</point>
+              <point>11 10</point>
+              <point>11 -11</point>
+              <point>10 -11</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall1">
+          <geometry>
+            <polyline>
+              <point>10 10</point>
+              <point>11 10</point>
+              <point>11 -11</point>
+              <point>10 -11</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="wall2">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>10 -10</point>
+              <point>10 -11</point>
+              <point>-11 -11</point>
+              <point>-11 -10</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall2">
+          <geometry>
+            <polyline>
+              <point>10 -10</point>
+              <point>10 -11</point>
+              <point>-11 -11</point>
+              <point>-11 -10</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="wall3">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-10 11</point>
+              <point>-10 -10</point>
+              <point>-11 -10</point>
+              <point>-11 11</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall3">
+          <geometry>
+            <polyline>
+               <point>-10 11</point>
+              <point>-10 -10</point>
+              <point>-11 -10</point>
+              <point>-11 11</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="wall4">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>11 11</point>
+              <point>11 10</point>
+              <point>-10 10</point>
+              <point>-10 11</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="wall4">
+          <geometry>
+            <polyline>
+              <point>11 11</point>
+              <point>11 10</point>
+              <point>-10 10</point>
+              <point>-10 11</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="obs1">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-10 -5</point>
+              <point>-6 -5</point>
+              <point>-6 -5.5</point>
+              <point>-10 -5.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs1">
+          <geometry>
+            <polyline>
+              <point>-10 -5</point>
+              <point>-6 -5</point>
+              <point>-6 -5.5</point>
+              <point>-10 -5.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+    <model name="obs2">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-5.5 -6</point>
+              <point>-5 -6</point>
+              <point>-5 -10</point>
+              <point>-5.5 -10</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs2">
+          <geometry>
+            <polyline>
+             <point>-5.5 -6</point>
+              <point>-5 -6</point>
+              <point>-5 -10</point>
+              <point>-5.5 -10</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs3">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-3 -5</point>
+              <point>4 -5</point>
+              <point>4 -6</point>
+              <point>-3 -6</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs3">
+          <geometry>
+            <polyline>
+             <point>-3 -5</point>
+              <point>4 -5</point>
+              <point>4 -6</point>
+              <point>-3 -6</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs4">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>6 -6</point>
+              <point>10 -6</point>
+              <point>10 -7</point>
+              <point>6 -7</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs4">
+          <geometry>
+            <polyline>
+              <point>6 -6</point>
+              <point>10 -6</point>
+              <point>10 -7</point>
+              <point>6 -7</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs5">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-6 -2</point>
+              <point>-5 -2</point>
+              <point>-5 -3</point>
+              <point>-6 -3</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs5">
+          <geometry>
+            <polyline>
+              <point>-6 -2</point>
+              <point>-5 -2</point>
+              <point>-5 -3</point>
+              <point>-6 -3</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs6">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-9.25 1</point>
+              <point>-4 1</point>
+              <point>-4 0</point>
+              <point>-9.25 0</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs6">
+          <geometry>
+            <polyline>
+              <point>-9.25 1</point>
+              <point>-4 1</point>
+              <point>-4 0</point>
+              <point>-9.25 0</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs7">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-7 5</point>
+              <point>-5 5</point>
+              <point>-5 3</point>
+              <point>-7 3</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs7">
+          <geometry>
+            <polyline>
+              <point>-7 5</point>
+              <point>-5 5</point>
+              <point>-5 3</point>
+              <point>-7 3</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs8">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-7 7</point>
+              <point>-3 7</point>
+              <point>-3 5</point>
+              <point>-7 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs8">
+          <geometry>
+            <polyline>
+              <point>-7 7</point>
+              <point>-3 7</point>
+              <point>-3 5</point>
+              <point>-7 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs9">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>0 7</point>
+              <point>1 5</point>
+              <point>-1 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs9">
+          <geometry>
+            <polyline>
+              <point>0 7</point>
+              <point>1 5</point>
+              <point>-1 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs10">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>4 6</point>
+              <point>5 7</point>
+              <point>6 6</point>
+              <point>5 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs10">
+          <geometry>
+            <polyline>
+              <point>4 6</point>
+              <point>5 7</point>
+              <point>6 6</point>
+              <point>5 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs11">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>4.5 7.5</point>
+              <point>5.5 8.5</point>
+              <point>6.5 7.5</point>
+              <point>5.5 6.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs11">
+          <geometry>
+            <polyline>
+              <point>4.5 7.5</point>
+              <point>5.5 8.5</point>
+              <point>6.5 7.5</point>
+              <point>5.5 6.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs12">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>6.5 8</point>
+              <point>8 8</point>
+              <point>8 6.5</point>
+              <point>6.5 6.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs12">
+          <geometry>
+            <polyline>
+             <point>6.5 8</point>
+              <point>8 8</point>
+              <point>8 6.5</point>
+              <point>6.5 6.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs13">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>6 6</point>
+              <point>7 6</point>
+              <point>7 5</point>
+              <point>6 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs13">
+          <geometry>
+            <polyline>
+            <point>6 6</point>
+              <point>7 6</point>
+              <point>7 5</point>
+              <point>6 5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs14">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>5 4</point>
+              <point>5.5 4</point>
+              <point>5.5 2.75</point>
+              <point>5 2.75</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs14">
+          <geometry>
+            <polyline>
+            <point>5 4</point>
+              <point>5.5 4</point>
+              <point>5.5 2.75</point>
+              <point>5 2.75</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs15">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>5.5 4</point>
+              <point>9 4</point>
+              <point>9 3.5</point>
+              <point>5.5 3.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs15">
+          <geometry>
+            <polyline>
+            <point>5.5 4</point>
+              <point>9 4</point>
+              <point>9 3.5</point>
+              <point>5.5 3.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs16">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>5 1.5</point>
+              <point>5.5 1.5</point>
+              <point>5.5 -1.5</point>
+              <point>5 -1.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs16">
+          <geometry>
+            <polyline>
+            <point>5 1.5</point>
+              <point>5.5 1.5</point>
+              <point>5.5 -1.5</point>
+              <point>5 -1.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs17">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>5.5 0.5</point>
+              <point>8 0.5</point>
+              <point>8 -0.5</point>
+              <point>5.5 -0.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs17">
+          <geometry>
+            <polyline>
+            <point>5.5 0.5</point>
+              <point>8 0.5</point>
+              <point>8 -0.5</point>
+              <point>5.5 -0.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs18">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>5 -2.75</point>
+              <point>5.5 -2.75</point>
+              <point>5.5 -4</point>
+              <point>5 -4</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs18">
+          <geometry>
+            <polyline>
+            <point>5 -2.75</point>
+              <point>5.5 -2.75</point>
+              <point>5.5 -4</point>
+              <point>5 -4</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs19">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>5.5 -3.5</point>
+              <point>9 -3.5</point>
+              <point>9 -4</point>
+              <point>5.5 -4</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs19">
+          <geometry>
+            <polyline>
+            <point>5.5 -3.5</point>
+              <point>9 -3.5</point>
+              <point>9 -4</point>
+              <point>5.5 -4</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs20">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-3 3</point>
+              <point>1.5 3</point>
+              <point>0 1</point>
+              <point>-3 1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs20">
+          <geometry>
+            <polyline>
+                <point>-3 3</point>
+              <point>1.5 3</point>
+              <point>0 1</point>
+              <point>-3 1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs21">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>1 0</point>
+              <point>3 2</point>
+              <point>3 -2</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs21">
+          <geometry>
+            <polyline>
+               <point>1 0</point>
+              <point>3 2</point>
+              <point>3 -2</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs22">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-3 -3</point>
+              <point>1.5 -3</point>
+              <point>0 -1</point>
+              <point>-3 -1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs22">
+          <geometry>
+            <polyline>
+                <point>-3 -3</point>
+              <point>1.5 -3</point>
+              <point>0 -1</point>
+              <point>-3 -1</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs23">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-1 -8</point>
+              <point>1 -8</point>
+              <point>0 -10</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs23">
+          <geometry>
+            <polyline>
+              <point>-1 -8</point>
+              <point>1 -8</point>
+              <point>0 -10</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs24">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-8 -7</point>
+              <point>-7 -7</point>
+              <point>-7 -8</point>
+              <point>-8 -8</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs24">
+          <geometry>
+            <polyline>
+              <point>-8 -7</point>
+              <point>-7 -7</point>
+              <point>-7 -8</point>
+              <point>-8 -8</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs25">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-8 -1.75</point>
+              <point>-6 -1.75</point>
+              <point>-6 -2.75</point>
+              <point>-8 -2.75</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs25">
+          <geometry>
+            <polyline>
+              <point>-8 -1.75</point>
+              <point>-6 -1.75</point>
+              <point>-6 -2.75</point>
+              <point>-8 -2.75</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs26">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>3 -8</point>
+              <point>4 -7</point>
+              <point>4.5 -7.5</point>
+              <point>3.5 -8.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs26">
+          <geometry>
+            <polyline>
+             <point>3 -8</point>
+              <point>4 -7</point>
+              <point>4.5 -7.5</point>
+              <point>3.5 -8.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs27">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-5 -4</point>
+              <point>-4 -4</point>
+              <point>-4 -5</point>
+              <point>-5 -5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs27">
+          <geometry>
+            <polyline>
+             <point>-5 -4</point>
+              <point>-4 -4</point>
+              <point>-4 -5</point>
+              <point>-5 -5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs28">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-2 9.5</point>
+              <point>-1.5 10</point>
+              <point>-0.5 9</point>
+              <point>-1 8.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs28">
+          <geometry>
+            <polyline>
+             <point>-2 9.5</point>
+              <point>-1.5 10</point>
+              <point>-0.5 9</point>
+              <point>-1 8.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs29">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-10 8</point>
+              <point>-9 8</point>
+              <point>-9 6</point>
+              <point>-10 6</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs29">
+          <geometry>
+            <polyline>
+             <point>-10 8</point>
+              <point>-9 8</point>
+              <point>-9 6</point>
+              <point>-10 6</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs30">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>-6 10</point>
+              <point>-4 10</point>
+              <point>-4 9</point>
+              <point>-6 9</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs30">
+          <geometry>
+            <polyline>
+             <point>-6 10</point>
+              <point>-4 10</point>
+              <point>-4 9</point>
+              <point>-6 9</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs31">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>1 9</point>
+              <point>3 9</point>
+              <point>2 7</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs31">
+          <geometry>
+            <polyline>
+              <point>1 9</point>
+              <point>3 9</point>
+              <point>2 7</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs32">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>3.5 4</point>
+              <point>4 3.5</point>
+              <point>3.5 3</point>
+              <point>3 3.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs32">
+          <geometry>
+            <polyline>
+             <point>3.5 4</point>
+              <point>4 3.5</point>
+              <point>3.5 3</point>
+              <point>3 3.5</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+<model name="obs33">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision1">
+          <geometry>
+            <polyline>
+              <point>3.2 -3</point>
+              <point>4 -3.2</point>
+              <point>3.8 -4</point>
+              <point>3 -3.8</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+        </collision>
+        <visual name="obs33">
+          <geometry>
+            <polyline>
+             <point>3.2 -3</point>
+              <point>4 -3.2</point>
+              <point>3.8 -4</point>
+              <point>3 -3.8</point>
+              <height>1</height>
+            </polyline>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/DarkGrey</name>
+            </script>
+          </material>
+        </visual>  
+      </link>
+    </model>
+</world>
+</sdf>

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/guangzhi/Research/spiking-ddpg-mapless-navigation/ros/catkin_ws/devel/setup.sh
