@@ -92,7 +92,7 @@ We install the [RPLIDAR S1](https://www.slamtec.com/en/Lidar/S1) on the center o
 To use the LiDAR with ROS, you need to download and install the rplidar_ros library from [here](https://github.com/robopeak/rplidar_ros) on the laptop controlling Turtlebot2.
 
 After installing the library, you need to add the LiDAR to the tf tree. 
-This can be done by adding a tf publisher node in `minimal.launch` from `tuetlebot_bringup` package:
+This can be done by adding a tf publisher node in `minimal.launch` from `turtlebot_bringup` package:
 
 ```xml
 <node name="base2laser" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 1 0 /base_link /laser 50">
@@ -139,8 +139,8 @@ python train_sddpg.py --cuda 1 --step 5
 This will automatically train 1000 episodes in the training environments and save the trained parameters every 10k steps.
 Intermediate training results are also saved through tensorboard.
 
-If you want to perform the training on CPU, you can change `--cuda` to 0. 
-You can also train for different inference timesteps of SNN by changing `--step` to the desired number. 
+If you want to perform the training on CPU, you can set `--cuda` to 0. 
+You can also train for different inference timesteps of SNN by setting `--step` to the desired number. 
 
 In addition, we also have the state-of-the-art DDPG implementation that trains a non-spiking deep actor network for mapless navigation.
 If you want to train the DDPG network, run the following commands to start the training in a new terminal:
@@ -176,8 +176,8 @@ python run_sddpg_eval.py --save 0 --cuda 1 --step 5
 This will automatically navigate the robot for 200 randomly generate start and goal positions. 
 The full evaluation will cost more than 2 hours.
 
-If you want to perform the evaluation on CPU, you can change `--cuda` to 0. 
-You can also evaluate for different inference timesteps of SNN by changing `--step` to the desired number.
+If you want to perform the evaluation on CPU, you can set `--cuda` to 0. 
+You can also evaluate for different inference timesteps of SNN by setting `--step` to the desired number.
 
 To deploy the trained SAN on Loihi and evaluate in Gazebo, you need to have the Loihi hardware. 
 If you have the Kapoho Bay USB chipset, run the following commands to start the evaluation:
@@ -188,10 +188,10 @@ cd <Dir>/<Project Name>/evaluation/eval_random_simulation_loihi
 KAPOHOBAY=1 python run_sddpg_loihi_eval.py --save 0 --step 5
 ```
 
-You can also evaluate for different inference timesteps of SNN by changing `--step` to the desired number.
+You can also evaluate for different inference timesteps of SNN by setting `--step` to the desired number.
 In addition, you also need to change the `epoch` value in the `<Project Name>/evaluation/loihi_network/snip/encoder.c` file corresponding to the inference timesteps.
 
-For both evaluations, you can change `--save` to 1 to save the robot routes and time.
+For both evaluations, you can set `--save` to 1 to save the robot routes and time.
 These running histories are then used to generate the results shown in the paper. 
 Run the following commands to evaluate the history by yourself:
 
