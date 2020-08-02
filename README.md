@@ -45,7 +45,7 @@ The results in the paper are generated from models trained using both Nvidia Tes
 Intel's neuromorphic library NxSDK is only required for SNN deployment on Loihi. 
 If you are interested in deploying the trained SNN on Loihi, please contact the [Intel Neuromorphic Lab](https://www.intel.com/content/www/us/en/research/neuromorphic-community.html).
 
-We have provided the `requirements.txt` for the python environment without NxSDK. In addition, we recommend setting up the environment [using virtualenv](https://pypi.org/project/virtualenv/).
+We have provided the `requirements.txt` for the python environment without NxSDK. In addition, we recommend setting up the environment using [virtualenv](https://pypi.org/project/virtualenv/).
 
 #### 2. Simulation Setup
 
