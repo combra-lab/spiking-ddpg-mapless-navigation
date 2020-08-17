@@ -186,10 +186,10 @@
         <collision name="collision1">
           <geometry>
             <polyline>
-              <point>-6 -6</point>
-              <point>-6 -5.5</point>
-              <point>-10 -5.5</point>
-              <point>-10 -6</point>
+              <point>-6.5 -6.5</point>
+              <point>-6.5 -6</point>
+              <point>-9.5 -6</point>
+              <point>-9.5 -6.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -197,10 +197,10 @@
         <visual name="obs1">
           <geometry>
             <polyline>
-              <point>-6 -6</point>
-              <point>-6 -5.5</point>
-              <point>-10 -5.5</point>
-              <point>-10 -6</point>
+              <point>-6.5 -6.5</point>
+              <point>-6.5 -6</point>
+              <point>-9.5 -6</point>
+              <point>-9.5 -6.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -219,10 +219,10 @@
         <collision name="collision1">
           <geometry>
             <polyline>
-              <point>-6 -10</point>
-              <point>-6 -10.5</point>
-              <point>-10 -10.5</point>
-              <point>-10 -10</point>
+              <point>-6.5 -9.5</point>
+              <point>-6.5 -10</point>
+              <point>-9.5 -10</point>
+              <point>-9.5 -9.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -230,10 +230,10 @@
         <visual name="obs2">
           <geometry>
             <polyline>
-              <point>-6 -10</point>
-              <point>-6 -10.5</point>
-              <point>-10 -10.5</point>
-              <point>-10 -10</point>
+              <point>-6.5 -9.5</point>
+              <point>-6.5 -10</point>
+              <point>-9.5 -10</point>
+              <point>-9.5 -9.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -252,10 +252,10 @@
         <collision name="collision1">
           <geometry>
             <polyline>
-              <point>-4.75 -6</point>
-              <point>-4.25 -6</point>
-              <point>-4.25 -10</point>
-              <point>-4.75 -10</point>
+              <point>-5.25 -6.5</point>
+              <point>-4.75 -6.5</point>
+              <point>-4.75 -9.5</point>
+              <point>-5.25 -9.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -263,10 +263,10 @@
         <visual name="obs3">
           <geometry>
             <polyline>
-              <point>-4.75 -6</point>
-              <point>-4.25 -6</point>
-              <point>-4.25 -10</point>
-              <point>-4.75 -10</point>
+              <point>-5.25 -6.5</point>
+              <point>-4.75 -6.5</point>
+              <point>-4.75 -9.5</point>
+              <point>-5.25 -9.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -285,10 +285,10 @@
         <collision name="collision1">
           <geometry>
             <polyline>
-              <point>-11.25 -6</point>
-              <point>-11.75 -6</point>
-              <point>-11.75 -10</point>
-              <point>-11.25 -10</point>
+              <point>-10.75 -6.5</point>
+              <point>-11.25 -6.5</point>
+              <point>-11.25 -9.5</point>
+              <point>-10.75 -9.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -296,10 +296,10 @@
         <visual name="obs4">
           <geometry>
             <polyline>
-              <point>-11.25 -6</point>
-              <point>-11.75 -6</point>
-              <point>-11.75 -10</point>
-              <point>-11.25 -10</point>
+              <point>-10.75 -6.5</point>
+              <point>-11.25 -6.5</point>
+              <point>-11.25 -9.5</point>
+              <point>-10.75 -9.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -914,8 +914,8 @@
             <polyline>
               <point>-4 11.5</point>
               <point>-4 12</point>
-              <point>-9 12</point>
-              <point>-9 11.5</point>
+              <point>-8 12</point>
+              <point>-8 11.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -925,8 +925,8 @@
             <polyline>
               <point>-4 11.5</point>
               <point>-4 12</point>
-              <point>-9 12</point>
-              <point>-9 11.5</point>
+              <point>-8 12</point>
+              <point>-8 11.5</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -945,10 +945,10 @@
         <collision name="collision1">
           <geometry>
             <polyline>
-              <point>-11.5 7</point>
+              <point>-11.5 9</point>
               <point>-11.5 12</point>
               <point>-12 12</point>
-              <point>-12 7</point>
+              <point>-12 9</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -956,10 +956,10 @@
         <visual name="obs4">
           <geometry>
             <polyline>
-              <point>-11.5 7</point>
+              <point>-11.5 9</point>
               <point>-11.5 12</point>
               <point>-12 12</point>
-              <point>-12 7</point>
+              <point>-12 9</point>
               <height>1</height>
             </polyline>
           </geometry>
@@ -979,8 +979,8 @@
           <geometry>
             <polyline>
               <point>-3.75 4</point>
-              <point>-3.75 8</point>
-              <point>-4.25 8</point>
+              <point>-3.75 7</point>
+              <point>-4.25 7</point>
               <point>-4.25 4</point>
               <height>1</height>
             </polyline>
@@ -990,8 +990,8 @@
           <geometry>
             <polyline>
               <point>-3.75 4</point>
-              <point>-3.75 8</point>
-              <point>-4.25 8</point>
+              <point>-3.75 7</point>
+              <point>-4.25 7</point>
               <point>-4.25 4</point>
               <height>1</height>
             </polyline>
@@ -1011,8 +1011,8 @@
         <collision name="collision1">
           <geometry>
             <polyline>
-              <point>-6 4</point>
-              <point>-6 4.5</point>
+              <point>-8 4</point>
+              <point>-8 4.5</point>
               <point>-12 4.5</point>
               <point>-12 4</point>
               <height>1</height>
@@ -1022,8 +1022,8 @@
         <visual name="obs6">
           <geometry>
             <polyline>
-              <point>-6 4</point>
-              <point>-6 4.5</point>
+              <point>-8 4</point>
+              <point>-8 4.5</point>
               <point>-12 4.5</point>
               <point>-12 4</point>
               <height>1</height>
