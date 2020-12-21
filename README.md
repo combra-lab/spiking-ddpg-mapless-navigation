@@ -10,6 +10,8 @@ The following figure shows an overview of the proposed method:
 The paper has been accepted at IROS 2020. 
 The arXiv preprint is available [here](https://arxiv.org/abs/2003.01157).
 
+**New**: We have created a new GitHub repo to demonstrate the online interaction with Loihi. If you are interested in using Loihi for real-time robot control, please [check it out](https://github.com/michaelgzt/loihi-control-loop-demo).
+
 ## Citation ##
 
 Guangzhi Tang, Neelesh Kumar, and Konstantinos P. Michmizos. 
