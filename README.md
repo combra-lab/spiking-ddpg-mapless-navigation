@@ -9,24 +9,22 @@ The following figure shows an overview of the proposed method:
 
 The paper has been accepted at IROS 2020. 
 The arXiv preprint is available [here](https://arxiv.org/abs/2003.01157).
+The IEEE Xplore published version is available [here](https://ieeexplore.ieee.org/abstract/document/9340948).
 
 **New**: We have created a new GitHub repo to demonstrate the online runtime interaction with Loihi. If you are interested in using Loihi for real-time robot control, please [check it out](https://github.com/michaelgzt/loihi-control-loop-demo).
 
 ## Citation ##
 
-Guangzhi Tang, Neelesh Kumar, and Konstantinos P. Michmizos. 
-"Reinforcement co-Learning of Deep and Spiking Neural Networks for Energy-Efficient Mapless Navigation with Neuromorphic Hardware." 
-*2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*. IEEE, 2020.
+G. Tang, N. Kumar and K. P. Michmizos, **"Reinforcement co-Learning of Deep and Spiking Neural Networks for Energy-Efficient Mapless Navigation with Neuromorphic Hardware,"** 2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2020, pp. 6090-6097, doi: 10.1109/IROS45743.2020.9340948.
 
 ```bibtex
 @inproceedings{tang2020reinforcement,
-  title={Reinforcement co-Learning of Deep and Spiking Neural Networks for Energy-Efficient Mapless Navigation with Neuromorphic Hardware},
-  author={Tang, Guangzhi and Kumar, Neelesh and Michmizos, Konstantinos P},
-  booktitle={2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  pages={1--8},
+  author={Tang, Guangzhi and Kumar, Neelesh and Michmizos, Konstantinos P.},
+  booktitle={2020 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}, 
+  title={Reinforcement co-Learning of Deep and Spiking Neural Networks for Energy-Efficient Mapless Navigation with Neuromorphic Hardware}, 
   year={2020},
-  organization={IEEE}
-}
+  pages={6090-6097},
+  doi={10.1109/IROS45743.2020.9340948}}
 ```
 
 ## Software Installation ##
